@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.component.css">
+    <title>Design Studio</title>
+</head>
+<body>
+    <div class="outer-container">
+        <nav class="top-row">
+            <div class="top-left logo">Random User</div>
+            <div class="top-center">
+              
+                <div class="top-left logo"></div>
+              
+            </div>
+            <div class="top-right auth-buttons">
+                <button class="login" (click)="back()">Logout</button>
+            </div>
+        </nav>
+        <div class="middle-row">
+            <div class="middle-left"></div>
+            <div class="middle-center">
+                <div><img src="/assets/random_user_icon_black.png" alt="Random" class="clickable-image" (click)="random()"></div>
+                <div><img src="/assets/user_info_icon_black.png" alt="Random" class="clickable-image" (click)="user()"></div>
+                
+            </div>
+            <div class="middle-right"></div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-left"></div>
+            <div class="bottom-center"></div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+</body>
+</html>

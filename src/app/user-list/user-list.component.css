@@ -1,0 +1,267 @@
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  background-image: url('/assets/d.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: #fff; 
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(28, 28, 28, 0.9); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .top-left, .top-center, .top-right, 
+  .middle-left, .middle-right, 
+  .bottom-left, .bottom-center, .bottom-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .middle-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .user-card {
+    background: rgb(242, 242, 242);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    height: 480px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .user-title {
+    margin-bottom: 10px;
+  }
+  
+  .user-title .user-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 5px;
+  }
+  
+  .user-title h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 1px;
+    margin-right: 15px;
+    color: black;
+  }
+  
+  .user-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: -12px;
+    width: 100%;
+  }
+  
+  .user-info .info-item i {
+    margin-right: 5px;
+  }
+  
+  .user-info .info-label {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  .user-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .user-icon {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .user-icon:hover {
+    color: #0056b3;
+  }
+  
+  .user-icon:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 10;
+  }
+  
+  .user-button {
+    margin-top: 10px;
+  }
+  
+  .user-button button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .user-button button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card {
+    flex: 1 1 300px;
+  }
+  
+ 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  .navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  .button-back button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-back button:hover {
+    background-color: #cc00ff;
+  }
+  
+ 
+  /* Styling for mobile screens */
+@media screen and (max-width: 600px) {
+  .user-card {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      font-size: 12px;
+      margin-bottom: 80px;
+  }
+
+  .user-title {
+      text-align: center; 
+  }
+
+  .user-title .user-img {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+  }
+
+  .user-title h2 {
+      font-size: 18px;
+      margin: 10px 0; 
+  }
+
+  .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      margin-right: 0;
+  }
+
+  .user-info .info-item {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      margin-bottom: 5px; 
+      width: 100%; 
+  }
+
+  .user-info .info-item i, .user-info .info-label {
+      margin-bottom: 0; 
+      flex: 0 0 auto; 
+  }
+
+  .user-info .info-label {
+      margin-left: 5px; 
+      text-align: left; 
+      flex: 1; 
+  }
+
+  .user-info .info-value {
+      flex: 2; 
+  }
+
+  .user-icons {
+      display: flex;
+      flex-direction: row; 
+      gap: 5px;
+  }
+
+  .user-button button {
+      width: 100%;
+      padding: 10px;
+  }
+
+  .middle-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      text-align: center;
+  }
+}
+
+  
+  

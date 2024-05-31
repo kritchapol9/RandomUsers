@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="re.component.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="top-row">
+          <div class="top-left">
+            <div class="button-back">
+                <button type="button" (click)="back()">Back</button>
+            </div>
+        </div>
+        <div class="top-center">
+            <div class="top-left logo">Register</div>
+        </div>
+        <div class="top-right"></div>
+    </div>
+        <div class="middle-row">
+            <div class="middle-left"></div>
+            <div class="middle-center">
+                <div class="Container">
+                    <form action="" method="post">
+                        <h2 class="title">Form Register</h2>
+                        <div class="content">
+                            <div class="input-box">
+                                <label for="firstname" class="details">Firstname</label>
+                                <input type="text" placeholder="Enter firstname" name="firstname" [(ngModel)]="firstname" (keypress)="clearerror('firstname')" required>
+                                <span *ngIf="errorMessage.includes('Firstname')" class="error-message">กรุณากรอกชื่อจริง</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="lastname" class="details">Lastname</label>
+                                <input type="text" placeholder="Enter lastname" name="lastname" value={{lastname}} [(ngModel)]="lastname" (keypress)="clearerror('lastname')" required>
+                                <span *ngIf="errorMessage.includes('Lastname')" class="error-message">กรุณากรอกนามสกุล</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="age" class="details">Age</label>
+                                <input type="text" placeholder="Enter age" name="age" [(ngModel)]="Age" (keypress)="clearerror('age')" required (input)="onInputChange1($event)">
+                                <span *ngIf="errorMessage.includes('Age')" class="error-message">กรุณากรอกอายุ</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="gender" class="details">Gender</label>
+                                <select id="gender" name="gender" [(ngModel)]="gender" (input)="clearerror('Gender')" required>
+                                    <option value="" disabled selected>Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="lgbtq+">LGBTQ+</option>
+                                </select>
+                                <span *ngIf="errorMessage.includes('Gender') && gender ==''" class="error-message">กรุณาเลือกเพศ</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="email" class="details">Email</label>
+                                <input type="email" placeholder="Enter email" name="email" value={{email}} [(ngModel)]="email"(input)="clearerror('email')" (keypress)="clearerror('email')" required>
+                                <span *ngIf="email.length > 0 && !isValidEmail() || errorMessage.includes('Email')" class="error-message">กรุณากรอกอีเมลในรูปแบบที่ถูกต้อง</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="phone" class="details">Phone</label>
+                                <input type="text" placeholder="Enter phone" name="phone"  (keypress)="clearerror('phone')" [(ngModel)]="Phone"(input)="onInputChange($event)" required>
+                                <span *ngIf="Phone.length < 10 && Phone.length > 0 || errorMessage.includes('Phone')" class="error-message">กรุณากรอกเบอร์โทรศัพท์10หลัก</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="password" class="details">Password</label>
+                                <input type="password" placeholder="Enter password" name="password" value={{pass}} [(ngModel)]="pass" (keypress)="clearerror('password')" required>
+                                <span *ngIf="pass.length < 8 && pass.length > 0 || errorMessage.includes('Password')" class="error-message">กรุณากรอกรหัสผ่านให้ครบถ้วน</span>
+                            </div>
+                            <div class="input-box">
+                                <label for="confirm_password" class="details">Confirm Password</label>
+                                <input type="password" placeholder="Enter confirm password" name="confirm_password" value={{con_pass}} [(ngModel)]="con_pass"  (keypress)="clearerror('con_pass')" required>
+                                <span *ngIf="con_pass.length < 8 && con_pass.length > 0 || errorMessage.includes('con_pass')" class="error-message">กรุณากรอกรหัสผ่านซ้ำอีกครั้ง</span>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <div class="buttonregis">
+                                <button (click)="adduser()">Register</button>
+                            </div>
+                            <div class="buttoncancle">
+                                <button (click)="cancle()">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="middle-right"></div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-left"></div>
+            <div class="bottom-center"></div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+</body>
+</html>

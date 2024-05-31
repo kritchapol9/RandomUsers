@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="user-card.component.css">
+    <title>User Card</title>
+</head>
+<body>
+   
+        <div class="top-row">
+            <div class="top-left">
+                
+            </div>
+            <div class="top-center"></div>
+            <div class="top-right"></div>
+        </div>
+        <div class="middle-row">
+            <div class="middle-left"></div>
+            <div class="middle-center">
+                <div class="user-card" *ngIf="user">
+                    <div class="user-title">
+                        <img class="user-img" [src]="user.picture" alt="User Picture">
+                        <h2><i class="fas fa-user"></i> {{ user.title }} {{ user.firstName }} {{ user.lastName }}</h2>
+                    </div>
+                    <div class="user-info">
+                        <div class="info-item">
+                            <i class="fas fa-venus-mars"></i>
+                            <p class="info-label">Gender:</p>
+                            <p>{{ user.gender }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p class="info-label">Email:</p>
+                            <p>{{ user.email }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p class="info-label">Phone:</p>
+                            <p>{{ user.phone }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p class="info-label">Cell:</p>
+                            <p>{{ user.cell }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <p class="info-label">Date of Birth:</p>
+                            <p>{{ user.dob }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-hourglass-half"></i>
+                            <p class="info-label">Age:</p>
+                            <p>{{ user.age }}</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="info-label">Location:</p>
+                            <p>{{ user.city }}, {{ user.state }}, {{ user.country }}, {{ user.postcode }}</p>
+                        </div>
+                    </div>
+                    <div class="user-icons">
+                        <div class="user-icon" data-tooltip="Fetch Random User">
+                            <i class="fas fa-random" (click)="onFetchRandomUser()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-right"></div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-left"></div>
+            <div class="bottom-center"></div>
+            <div class="bottom-right"></div>
+        </div>        
+    
+</body>
+</html>

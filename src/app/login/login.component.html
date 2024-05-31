@@ -1,0 +1,51 @@
+
+
+<body>
+    <div class="outer-container">
+        <div class="top-row">
+            <div class="top-left">
+                <div class="button-back">
+                    <button type="button" (click)="back()">Back</button>
+                </div>
+            </div>
+            <div class="top-center">
+                <div class="top-left logo">Random User</div>
+            </div>
+            <div class="top-right"></div>
+        </div>
+        <div class="middle-row">
+            
+            <div class="middle-left"></div>
+            <div class="middle-center">
+                <div>
+                    <img src="/assets/icon.jpg" class="imgMe">
+                   <div class="title">
+                        
+                        <form action="">
+                            <div class="input-box">
+                                <span class="details">Email :</span>
+                                <input type="email" placeholder="botnoi@gmail.com" name="email" [(ngModel)]="email" (input)="onEmailChange($event)" required>
+                                <span *ngIf="errorMessage.includes('กรุณากรอกอีเมลที่ถูกต้อง')" class="error-message">กรุณากรอกอีเมลที่ถูกต้อง</span>
+                            </div> 
+                            <div class="input-box">
+                                <span class="details">Password :</span>
+                                <input type="password" placeholder="password" name="pass" [(ngModel)]="pass" (input)="onPassChange($event)" required>
+                                <span *ngIf="errorMessage.includes('กรุณากรอกรหัสผ่านอย่างน้อย 8 ตัวอักษร')" class="error-message">กรุณากรอกรหัสผ่านอย่างน้อย 8 ตัวอักษร</span>
+                            </div>
+                            <div class="button-login">
+                                <button type="button" (click)="loginBtn()">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-right"></div>
+        </div>
+        <div class="bottom-row">
+            <div class="bottom-left"></div>
+            <div class="bottom-center"></div>
+            <div class="bottom-right"></div>
+        </div>
+    </div>
+</body>
+

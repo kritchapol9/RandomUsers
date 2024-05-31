@@ -1,0 +1,65 @@
+
+<div class="outer-container">
+    <nav class="top-row">
+        <div class="top-left">
+            <div class="button-back">
+                <button type="button" (click)="back()">Back</button>
+            </div>
+        </div>
+        <div class="top-center">
+            <div class="top-left logo"></div>
+        </div>
+        <div class="top-right auth-buttons">
+        </div>
+    </nav>
+    <div class="middle-row">
+        <div class="middle-left"></div>
+        <div class="middle-center">
+        <div class="user-list">
+            <div *ngFor="let user of users" class="user-card">
+                <div class="user-title">
+                    <img class="user-img" [src]="user.picture" alt="User Picture">
+                    <h2><i class="fas fa-user"></i> {{ user.title }} {{ user.firstName }} {{ user.lastName }}</h2>
+                </div>
+                <div class="user-info">
+                    <div class="info-item">
+                        <i class="fas fa-venus-mars"></i>
+                        <p class="info-label">Gender:</p>
+                        <p>{{ user.gender }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p class="info-label">Email:</p>
+                        <p>{{ user.email }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p class="info-label">Phone:</p>
+                        <p>{{ user.phone }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p class="info-label">Cell:</p>
+                        <p>{{ user.cell }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <p class="info-label">Date of Birth:</p>
+                        <p>{{ user.dob }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hourglass-half"></i>
+                        <p class="info-label">Age:</p>
+                        <p>{{ user.age }}</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p class="info-label">Location:</p>
+                        <p>{{ user.city }}, {{ user.state }}, {{ user.country }}, {{ user.postcode }}</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

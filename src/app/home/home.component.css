@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; 
+    background-image: url('/assets/d.jpg'); /* Replace 'your-image-url.jpg' with the path to your image */
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #fff; 
+    height: 100vh;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28, 28, 28, 0.9); /* Add a semi-transparent background color to make text readable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(28, 28, 28, 0.9); /* Ensure the navbar is semi-transparent */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50; 
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 100px;
+}
+.auth-buttons .login, .auth-buttons .signup {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .signup {
+    background-color: #ffffff; 
+}
+
+.auth-buttons .login:hover {
+    background-color: #45a049;
+}
+
+.auth-buttons .signup:hover {
+    background-color: red;
+}
+
+.middle-row, .bottom-row {
+    display: flex;
+    flex: 1;
+}
+
+.middle-left, .middle-right, .bottom-left, .bottom-center, .bottom-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+.bottom-center {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.fade-image {
+    max-width: 100%;
+    max-height: 20vh;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-image:hover {
+    opacity: 0.5;
+}
+.clickable-image {
+    cursor: pointer;
+    width: 150px; /* ปรับขนาดตามต้องการ */
+    height: auto;
+    margin: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพ */
+}
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .outer-container {
+        width: 100%;
+        height: 1000px;
+    }
+
+    .top-row {
+        flex-direction: FLEX;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .top-left, .top-center, .top-right {
+        font-size: 14px;
+        text-align: center;
+        margin: inherit;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .auth-buttons .login, .auth-buttons .signup {
+       
+        font-size: 12px;
+        
+    }
+
+    .middle-row {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .middle-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .fade-image {
+        flex: none;
+        max-width: 100%;
+        max-height: 20vh;
+        width: auto;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .bottom-center {
+        padding: 10px 0;
+    }
+
+    .bottom-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+}
