@@ -16,7 +16,7 @@ export class ApiInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
         if (error instanceof HttpErrorResponse) {
-          console.error('API Error:', error);
+          console.error('API Error :', error.message); // Log the error message
         }
         return throwError(() => error);
       })
