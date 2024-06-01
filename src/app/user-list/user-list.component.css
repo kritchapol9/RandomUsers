@@ -190,7 +190,7 @@
   /* Styling for mobile screens */
 @media screen and (max-width: 600px) {
   .user-card {
-      width: 100%;
+      width: 300px;
       height: auto;
       padding: 15px;
       font-size: 12px;
