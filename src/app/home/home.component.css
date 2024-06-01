@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #121212; 
-    background-image: url('/assets/d.jpg'); /* Replace 'your-image-url.jpg' with the path to your image */
-    background-size: cover; /* Ensure the image covers the whole background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-image: url('/assets/d.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: #fff; 
     height: 100vh;
 }
@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: rgba(28, 28, 28, 0.9); /* Add a semi-transparent background color to make text readable */
+    background-color: rgba(28, 28, 28, 0.9); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(28, 28, 28, 0.9); /* Ensure the navbar is semi-transparent */
+    background-color: rgba(28, 28, 28, 0.9); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
@@ -160,7 +160,7 @@ body {
     .top-left, .top-center, .top-right {
         font-size: 14px;
         text-align: center;
-        margin: inherit;
+       
     }
 
     .nav-links {
@@ -175,6 +175,7 @@ body {
     .auth-buttons .login, .auth-buttons .signup {
        
         font-size: 12px;
+        margin-right: 40px;
         
     }
 
