@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
-  private apiUrl: string = 'https://randomuser.me/api/';
+  private apiUrl: string = 'https://randomus.me/api/';
   constructor(private http: HttpClient) { }
 
   GetUser(): Observable<any> {
@@ -15,5 +15,5 @@ export class ServiceService {
 
   GetUsers(results: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}?results=${results}`);
-}
+  }
 }
