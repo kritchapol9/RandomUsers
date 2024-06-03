@@ -26,11 +26,11 @@
                     <form action="" method="post">
                         <h2 class="title">Form Register</h2>
                         <div class="content">
-                            <div class="input-box">
+                               <div class="input-box">
                                 <label for="firstname" class="details">Firstname</label>
                                 <input type="text" placeholder="Enter firstname" name="firstname" [(ngModel)]="firstname" (keypress)="clearerror('firstname')" required>
                                 <span *ngIf="errorMessage.includes('Firstname')" class="error-message">กรุณากรอกชื่อจริง</span>
-                            </div>
+                               </div>
                             <div class="input-box">
                                 <label for="lastname" class="details">Lastname</label>
                                 <input type="text" placeholder="Enter lastname" name="lastname" value={{lastname}} [(ngModel)]="lastname" (keypress)="clearerror('lastname')" required>
