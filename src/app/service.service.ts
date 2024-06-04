@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceService {
-  private apiUrl: string = 'https://randomuse.me/api/';
+  private apiUrl: string = 'https://randomuser.me/api/';
   constructor(private http: HttpClient) { }
 
   GetUser(): Observable<any> {
