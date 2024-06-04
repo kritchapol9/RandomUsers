@@ -180,39 +180,39 @@ body {
   }
 
   .user-title {
-      text-align: center; /* Ensure the title is centered */
+      text-align: center; /
   }
 
   .user-title .user-img {
       width: 100px;
       height: 100px;
-      margin: 0 auto; /* Center the image */
+      margin: 0 auto; 
   }
 
   .user-title h2 {
       font-size: 20px;
-      margin: 10px 0; /* Add margin for spacing */
+      margin: 10px 0;
   }
 
   .user-info {
       margin-right: 0;
-      align-items: center; /* Center align items */
+      align-items: center; 
   }
 
   .user-info .info-item {
       flex-direction: row;
       align-items: center;
-      justify-content: space-between; /* Adjust to space-between */
+      justify-content: space-between; 
       margin-bottom: 7px;
-      width: 100%; /* Ensure full width */
+      width: 100%; 
   }
 
   .user-info .info-item i, .user-info .info-label {
-      margin-bottom: 0; /* Adjust margin */
+      margin-bottom: 0; 
   }
 
   .user-icons {
-      flex-direction: row; /* Adjust to row */
+      flex-direction: row; 
       gap: 5px;
   }
 
@@ -226,7 +226,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 20px; /* Adjust margin-top */
+      margin-top: 20px; 
       text-align: center;
   }
 }
