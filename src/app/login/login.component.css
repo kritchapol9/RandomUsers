@@ -5,10 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #121212; 
-    background-image: url('/assets/d.jpg'); /* Replace 'your-image-url.jpg' with the path to your image */
-    background-size: cover; /* Ensure the image covers the whole background */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-image: url('/assets/d.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     color: #fff; 
     height: 100vh;
 }
