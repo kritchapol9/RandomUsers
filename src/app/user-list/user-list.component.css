@@ -187,7 +187,7 @@
   }
   
  
-  /* Styling for mobile screens */
+
 @media screen and (max-width: 600px) {
   .user-card {
       width: 300px;
