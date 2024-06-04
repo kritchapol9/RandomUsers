@@ -144,7 +144,7 @@ body {
     }
 
     .top-row {
-        flex-direction: FLEX;
+        flex-direction :flex;
         align-items: center;
         text-align: center;
         padding: 20px;
