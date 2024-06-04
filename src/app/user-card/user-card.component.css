@@ -150,7 +150,7 @@
     border-radius: 5px;
 }
 
-/* Styling for mobile screens */
+
 @media screen and (max-width: 600px) {
     .user-card {
         width: 100%;
